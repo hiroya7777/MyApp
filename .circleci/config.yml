@@ -1,0 +1,53 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/php:latest
+      - image: circleci/mysql:latest
+        command: mysqld --default-authentication-plugin=mysql_native_password
+    environment:
+      - APP_DEBUG: true
+      - APP_ENV: testing
+      - APP_KEY: base64:hcIVv+RebpZG5Ym8Xh3yV2bmJH97Z3yOYOp8FOtu6sg=
+      - DB_CONNECTION: circle_test
+      - MYSQL_ALLOW_EMPTY_PASSWORD: true
+
+    working_directory: ~/myapp
+
+    steps:
+      - checkout
+
+      - run:
+          name: install dockerize
+          command: wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && sudo tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+          environment:
+            DOCKERIZE_VERSION: v0.6.1
+
+      - run:
+          name: Install PHP Extensions
+          command: sudo docker-php-ext-install pdo_mysql
+
+      # # - restore_cache:
+      #     keys:
+      #       - v1-dependencies-{{ checksum "composer.json" }}
+      #       - v1-dependencies-
+
+      # # - run:
+      #     name: composer install
+      #     command: composer install -n --prefer-dist
+
+      # # - save_cache:
+      #     paths:
+      #       - ./vendor
+      #     key: v1-dependencies-{{ checksum "composer.json" }}
+
+      - run:
+          name: Wait for db
+          command: dockerize -wait tcp://localhost:3306 -timeout 1m
+
+      # run seeding
+      # - run: php artisan migrate
+      # - run: php artisan db:seed
+
+      # run tests!
+      # - run: php ./vendor/bin/phpunit
