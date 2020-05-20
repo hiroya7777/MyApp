@@ -12,7 +12,7 @@ jobs:
       - DB_CONNECTION: circle_test
       - MYSQL_ALLOW_EMPTY_PASSWORD: true
 
-    working_directory: ~/app
+    working_directory: ~/myapp
 
     steps:
       - checkout
