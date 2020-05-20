@@ -32,7 +32,7 @@ jobs:
             - v1-dependencies-{{ checksum "composer.json" }}
             - v1-dependencies-
 
-      # - run:
+      - run:
           name: composer install
           command: composer install -n --prefer-dist
 
