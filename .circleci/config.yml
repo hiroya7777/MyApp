@@ -29,7 +29,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "app/composer.json" }}
+            - v1-dependencies-{{ checksum "composer.json" }}
             - v1-dependencies-
 
       # - run:
@@ -39,15 +39,15 @@ jobs:
       - save_cache:
           paths:
             - ./vendor
-          key: v1-dependencies-{{ checksum "app/composer.json" }}
+          key: v1-dependencies-{{ checksum "composer.json" }}
 
       - run:
           name: Wait for db
           command: dockerize -wait tcp://localhost:3306 -timeout 1m
 
       # run seeding
-      - run: php artisan migrate
-      - run: php artisan db:seed
+      # - run: php artisan migrate
+      # - run: php artisan db:seed
 
       # run tests!
-      - run: php ./vendor/bin/phpunit
+      # - run: php ./vendor/bin/phpunit
