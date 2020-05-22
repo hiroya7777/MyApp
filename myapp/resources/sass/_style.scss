@@ -1,0 +1,132 @@
+img.cart{
+  width: 30px;
+}
+
+img.incart{
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  height: 140px;
+  object-fit: cover;
+}
+
+.mycart_box{
+  color: #4c4c4c;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 24px;
+  padding: 24px 8px;
+  font-size: 1.1em;
+  background-color: #fefefe;
+}
+
+.footer_design{
+  background-color: #07728a;;
+  text-align: center;
+  color: #fefefe;
+  padding: 60px;
+}
+
+.buy-btn{
+  margin: 40px auto 60px;
+  width: 200px;
+  display: block;
+  background-color: #ff5c73;
+}
+
+.ball{
+  position: absolute;
+}
+
+.pagenate{
+  width: 200px;margin: 20px auto;
+}
+
+.btn-hover {
+  color: #fff;
+  background-color: #00FF33;
+  border-color: #00FF33;
+}
+
+.btn-hover:hover {
+  color: #fff;
+  background-color: #00FF33;
+  border-color: #00FF33;
+}
+
+.btn-back-hover {
+  color: #fff;
+  background-color: #FF9900;
+  border-color: #FF9900;
+}
+
+.btn-back-hover:hover {
+  color: #fff;
+  background-color: #FF9900;
+  border-color: #FF9900;
+}
+
+.detail_box {
+  color: #4c4c4c;
+  font-weight: bold;
+  text-align: center;
+  padding: 24px 8px;
+  font-size: 1.1em;
+  background-color: #fefefe;
+}
+
+img.indetail {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.detail-btn {
+  display: flex !important;
+  margin-left: 380px;
+}
+
+.cart-btn {
+  margin: 40px auto 60px;
+  width: 200px;
+  display: block;
+  background-color: #00FFFF;
+  margin-left:40px;
+}
+.cart-btn-top {
+  margin: auto;
+  display: block;
+  background-color: #00FFFF;
+  height: 40px;
+  font-size: 15px;
+}
+
+.back-btn {
+  margin: 40px auto 60px;
+  width: 200px;
+  display: block;
+  background-color: #FFCC00;
+}
+
+h1 {
+  border-bottom: double 6px orange;
+  border-top: double 6px orange;
+}
+
+.detail-btn-top {
+  margin: auto;
+  display: block;
+  background-color: #FF0000;
+  height: 38px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.detail-btn-hover:hover {
+  color: #fff;
+  background-color: #FF66FF;
+  border-color: #FF66FF;
+}
