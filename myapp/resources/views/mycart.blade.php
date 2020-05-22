@@ -28,20 +28,22 @@
                         </div>
                     @endforeach
 
-                    <div class="text-center p-2">
-                        個数：{{$count}}個<br>
-                        <p style="font-size:1.2em; font-weight:bold;">合計金額:{{number_format($sum)}}円</p>
-                    </div>
+                    <div class="buy-box p-2">
                     <form action="/checkout" method="POST">
                         @csrf
                         <button type="submit" class="btn btn-danger btn-lg text-center buy-btn" >購入する</button>
                     </form>
+                        <p style="font-size:1.2em; font-weight:bold;">個数：{{$count}}個<br>
+                        <p style="font-size:1.2em; font-weight:bold;">合計金額：{{number_format($sum)}}円</p>
+                    </div>
 
                 @else
                     <p class="text-center">カートはからっぽです。</p>
                 @endif
             </div>
-                <a href="/">商品一覧へ</a>
+                <form action="/" method="get">
+                    <button type="submit" class="btn btn-back-hover btn-lg text-center back-btn" >商品一覧へ戻る</button>
+                </form>
             </div>
         </div>
     </div>
