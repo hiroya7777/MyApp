@@ -11162,3 +11162,15 @@ img.top {
   padding: 10px;
 }
 
+.delete-btn {
+  margin: auto;
+  display: block;
+  background-color: #CC0000;
+  height: 30px;
+  font-size: 10px;
+  color: #fff;
+  font-weight: bold;
+  width: 200px;
+  border-radius: 20px;
+}
+

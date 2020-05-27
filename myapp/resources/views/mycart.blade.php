@@ -23,7 +23,7 @@
                                 <form action="/cartdelete" method="post">
                                     @csrf
                                     <input type="hidden" name="stock_id" value="{{ $myCart->stock->id }}">
-                                    <input type="submit" value="カートから削除する">
+                                    <input type="submit" value="カートから削除する" class="delete-btn">
                                 </form>
                             </div>
                         </div>
