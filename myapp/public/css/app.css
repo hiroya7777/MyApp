@@ -10965,7 +10965,8 @@ img.incart {
 
 .buy-btn {
   width: 200px;
-  background-color: #ff5c73;
+  background-color: #CC0000;
+  border-radius: 20px;
 }
 
 .ball {
@@ -11167,9 +11168,8 @@ img.top {
   display: block;
   background-color: #CC0000;
   height: 30px;
-  font-size: 10px;
+  font-size: 15px;
   color: #fff;
-  font-weight: bold;
   width: 200px;
   border-radius: 20px;
 }
