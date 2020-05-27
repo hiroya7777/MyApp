@@ -28,10 +28,9 @@ img.incart{
 }
 
 .buy-btn{
-  margin: 40px auto 60px;
   width: 200px;
-  display: block;
-  background-color: #ff5c73;
+  background-color: #CC0000;
+  border-radius: 20px;
 }
 
 .ball{
@@ -46,24 +45,28 @@ img.incart{
   color: #fff;
   background-color: #BB0000;
   border-color: #BB0000;
+  border-radius: 20px;
 }
 
 .btn-hover:hover {
   color: #fff;
   background-color: #BB0000;
   border-color: #BB0000;
+  border-radius: 20px;
 }
 
 .btn-back-hover {
   color: #fff;
   background-color: #FF9900;
   border-color: #FF9900;
+  border-radius: 20px;
 }
 
 .btn-back-hover:hover {
   color: #fff;
   background-color: #FF9900;
   border-color: #FF9900;
+  border-radius: 20px;
 }
 
 .detail_box {
@@ -104,14 +107,15 @@ img.top {
   display: block;
   background-color: #CC0000;
   margin-left:40px;
+  border-radius: 20px;
 }
 .cart-btn-top {
   margin: auto;
   display: block;
   background-color: #CC0000;
   height: 30px;
-  font-size: 10px;
-  font-weight: bold;
+  font-size: 15px;
+  color: #fff;
   width:200px;
   border-radius: 20px;
 }
@@ -128,9 +132,8 @@ img.top {
   display: block;
   background-color: #CC0000;
   height: 30px;
-  font-size: 10px;
+  font-size: 15px;
   color: #fff;
-  font-weight: bold;
   width:200px;
   border-radius: 20px;
 }
@@ -142,7 +145,10 @@ img.top {
 }
 
 .buy-box {
-  margin-left: 50px;
+  width: 1000px;
+  text-align: center;
+  background-color: white;
+  margin: 50px 0 0 100px;
 }
 
 .py-4 {
@@ -215,6 +221,17 @@ margin-right: 4px;
   font-family: 'Corben', cursive;
 }
 
-.footbar {
-  font-family: 'Corben', cursive;
+.buy-bottom-box {
+  padding: 10px;
+}
+
+.delete-btn {
+  margin: auto;
+  display: block;
+  background-color: #CC0000;
+  height: 30px;
+  font-size: 15px;
+  color: #fff;
+  width:200px;
+  border-radius: 20px;
 }

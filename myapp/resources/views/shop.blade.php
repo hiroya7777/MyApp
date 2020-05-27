@@ -19,13 +19,13 @@
                                     <br>
                                     <form action="/detail/{id}" method="get">
                                         <input type="hidden" name="stock_id" value="{{ $stock->id }}">
-                                        <input type="submit" value="商品詳細へ" class="btn detail-btn-hover btn-lg text-center detail-btn-top">
+                                        <input type="submit" value="商品詳細へ" class="detail-btn-hover detail-btn-top">
                                     </form>
                                     <br>
                                     <form action="mycart" method="post">
                                         @csrf
                                         <input type="hidden" name="stock_id" value="{{ $stock->id }}">
-                                        <input type="submit" value="カートに入れる" class="btn btn-hover btn-lg text-center cart-btn-top">
+                                        <input type="submit" value="カートに入れる" class="btn-hover cart-btn-top">
                                     </form>
 
                                 </div>
