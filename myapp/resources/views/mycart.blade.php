@@ -10,36 +10,37 @@
             <div class="">
                 <p class="text-center">{{ $message ?? '' }}</p><br>
                 <div class="d-flex flex-row flex-wrap">
+                    @if($myCarts->isNotEmpty())
 
-                @if($myCarts->isNotEmpty())
-
-                    @foreach($myCarts as $myCart)
-                        <div class="mycart_box">
-                            {{ $myCart->stock->name }} <br>
-                            {{ number_format($myCart->stock->fee) }}円 <br>
-                            <img src="/image/{{$myCart->stock->imgpath}}" alt="" class="incart" >
-                            <br>
-
-                            <form action="/cartdelete" method="post">
-                                @csrf
-                                <input type="hidden" name="stock_id" value="{{ $myCart->stock->id }}">
-                                <input type="submit" value="カートから削除する">
-                            </form>
-                        </div>
-                    @endforeach
+                        @foreach($myCarts as $myCart)
+                            <div class="col-xs-6 col-sm-4 col-md-4 ">
+                                <div class="mycart_box">
+                                    {{ $myCart->stock->name }} <br>
+                                    {{ number_format($myCart->stock->fee) }}円 <br>
+                                    <img src="/image/{{$myCart->stock->imgpath}}" alt="" class="incart" >
+                                    <br>
+                                    <form action="/cartdelete" method="post">
+                                        @csrf
+                                        <input type="hidden" name="stock_id" value="{{ $myCart->stock->id }}">
+                                        <input type="submit" value="カートから削除する">
+                                    </form>
+                                </div>
+                            </div>
+                        @endforeach
 
                     <div class="buy-box p-2">
-                    <form action="/checkout" method="POST">
-                        @csrf
-                        <button type="submit" class="btn btn-danger btn-lg text-center buy-btn" >購入する</button>
-                    </form>
-                        <p style="font-size:1.2em; font-weight:bold;">個数：{{$count}}個<br>
-                        <p style="font-size:1.2em; font-weight:bold;">合計金額：{{number_format($sum)}}円</p>
+                        <div class=buy-bottom-box>
+                            <p style="font-size:1.2em; font-weight:bold;">個数：{{$count}}個<br>
+                            <p style="font-size:1.2em; font-weight:bold;">合計金額：{{number_format($sum)}}円</p>
+                            <form action="/checkout" method="POST">
+                                @csrf
+                            <button type="submit" class="btn btn-danger btn-lg text-center buy-btn" >購入する</button>
+                            </form>
+                        </div>
                     </div>
-
-                @else
-                    <p class="text-center">カートはからっぽです。</p>
-                @endif
+                    @else
+                        <p class="text-center">カートはからっぽです。</p>
+                    @endif
             </div>
                 <form action="/" method="get">
                     <button type="submit" class="btn btn-back-hover btn-lg text-center back-btn" >商品一覧へ戻る</button>
