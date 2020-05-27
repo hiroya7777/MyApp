@@ -28,7 +28,9 @@ img.incart{
 }
 
 .buy-btn{
+  margin: 40px auto 60px;
   width: 200px;
+  display: block;
   background-color: #ff5c73;
 }
 
@@ -140,10 +142,7 @@ img.top {
 }
 
 .buy-box {
-  width: 1000px;
-  text-align: center;
-  background-color: white;
-  margin: 50px 0 0 100px;
+  margin-left: 50px;
 }
 
 .py-4 {
@@ -218,8 +217,4 @@ margin-right: 4px;
 
 .footbar {
   font-family: 'Corben', cursive;
-}
-
-.buy-bottom-box{
-  padding:10px;
 }
