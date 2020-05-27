@@ -13,10 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/mycart', 'ShopController@myCart');
+    Route::post('/mycart', 'ShopController@addMycart');
+    Route::post('/cartdelete', 'ShopController@deleteCart');
+    Route::post('/checkout', 'ShopController@checkout');
+    Route::get('/detail/{id}', 'ShopController@show');
+    Route::post('/detail/{id}', 'ShopController@addMycart');
 });
 
-Auth::routes();
+Route::get('/', 'ShopController@index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('login/github', 'Auth\LoginController@redirectToProvider');
+Route::get('/login/callback/github', 'Auth\LoginController@handleProviderCallback');
+
+Auth::routes();

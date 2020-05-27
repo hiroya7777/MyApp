@@ -10933,3 +10933,227 @@ a.text-dark:focus {
   }
 }
 
+img.cart {
+  width: 30px;
+}
+
+img.incart {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mycart_box {
+  color: #4c4c4c;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 24px;
+  padding: 24px 8px;
+  font-size: 1.1em;
+  background-color: #fefefe;
+}
+
+.footer_design {
+  background-color: #07728a;
+  text-align: center;
+  color: #fefefe;
+  padding: 60px;
+}
+
+.buy-btn {
+  margin: 40px auto 60px;
+  width: 200px;
+  display: block;
+  background-color: #ff5c73;
+}
+
+.ball {
+  position: absolute;
+}
+
+.pagenate {
+  width: 200px;
+  margin: 20px auto;
+}
+
+.btn-hover {
+  color: #fff;
+  background-color: #BB0000;
+  border-color: #BB0000;
+}
+
+.btn-hover:hover {
+  color: #fff;
+  background-color: #BB0000;
+  border-color: #BB0000;
+}
+
+.btn-back-hover {
+  color: #fff;
+  background-color: #FF9900;
+  border-color: #FF9900;
+}
+
+.btn-back-hover:hover {
+  color: #fff;
+  background-color: #FF9900;
+  border-color: #FF9900;
+}
+
+.detail_box {
+  color: #4c4c4c;
+  font-weight: bold;
+  text-align: center;
+  padding: 24px 8px;
+  font-size: 1.1em;
+  background-color: #fefefe;
+}
+
+img.indetail {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  height: 340px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+img.top {
+  width: 1170px;
+  display: block;
+  height: 450px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.detail-btn {
+  display: flex !important;
+  margin-left: 380px;
+}
+
+.cart-btn {
+  margin: 40px auto 60px;
+  width: 200px;
+  display: block;
+  background-color: #CC0000;
+  margin-left: 40px;
+}
+
+.cart-btn-top {
+  margin: auto;
+  display: block;
+  background-color: #CC0000;
+  height: 30px;
+  font-size: 10px;
+  font-weight: bold;
+  width: 200px;
+  border-radius: 20px;
+}
+
+.back-btn {
+  margin: 40px auto 60px;
+  width: 200px;
+  display: block;
+  background-color: #FFCC00;
+}
+
+.detail-btn-top {
+  margin: auto;
+  display: block;
+  background-color: #CC0000;
+  height: 30px;
+  font-size: 10px;
+  color: #fff;
+  font-weight: bold;
+  width: 200px;
+  border-radius: 20px;
+}
+
+.detail-btn-hover:hover {
+  color: #fff;
+  background-color: #BB0000;
+  border-color: #BB0000;
+}
+
+.buy-box {
+  margin-left: 50px;
+}
+
+.py-4 {
+  background-color: #DDDDDD;
+}
+
+.paginationWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 38px;
+  margin-bottom: 40px;
+}
+
+.paginationWrap ul.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+
+.paginationWrap ul.pagination li {
+  display: inline;
+  margin-right: 4px;
+}
+
+.paginationWrap ul.pagination li a {
+  color: #2f3859;
+  padding: 8px 14px;
+  text-decoration: none;
+}
+
+.paginationWrap ul.pagination li a.active {
+  background-color: #4b90f6;
+  color: white;
+  border-radius: 40px;
+  width: 38px;
+  height: 38px;
+}
+
+.paginationWrap ul.pagination li a:hover:not(.active) {
+  background-color: #e1e7f0;
+  border-radius: 40px;
+}
+
+.footer_design {
+  background-color: #07728a;
+  text-align: center;
+  color: #fefefe;
+  padding: 30px;
+}
+
+.pt-4,
+.py-4 {
+  padding-top: 3.5rem !important;
+}
+
+.pb-4,
+.py-4 {
+  padding-bottom: 3.5rem !important;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.32rem;
+  padding-bottom: 0.32rem;
+  margin-right: 1rem;
+  font-size: 1.125rem;
+  line-height: inherit;
+  white-space: nowrap;
+  font-family: "Corben", cursive;
+}
+
+.footbar {
+  font-family: "Corben", cursive;
+}
+
