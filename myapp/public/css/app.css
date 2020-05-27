@@ -10982,24 +10982,28 @@ img.incart {
   color: #fff;
   background-color: #BB0000;
   border-color: #BB0000;
+  border-radius: 20px;
 }
 
 .btn-hover:hover {
   color: #fff;
   background-color: #BB0000;
   border-color: #BB0000;
+  border-radius: 20px;
 }
 
 .btn-back-hover {
   color: #fff;
   background-color: #FF9900;
   border-color: #FF9900;
+  border-radius: 20px;
 }
 
 .btn-back-hover:hover {
   color: #fff;
   background-color: #FF9900;
   border-color: #FF9900;
+  border-radius: 20px;
 }
 
 .detail_box {
@@ -11040,6 +11044,7 @@ img.top {
   display: block;
   background-color: #CC0000;
   margin-left: 40px;
+  border-radius: 20px;
 }
 
 .cart-btn-top {
