@@ -23,7 +23,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="background-color:#0092b3; color:#fefefe;">
             <div class="container">
-                <a class="navbar-brand" style="color:#fefefe; font-size:1.4em" href="{{ url('/') }}" >
+                <a class="navbar-brand" style="color:#fefefe; font-size:2.0em" href="{{ url('/') }}" >
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -82,23 +82,9 @@
         </main>
 
         <footer class="footer_design">
-
-        @guest
-            <p class="nav-item" style="display:inline;">
-                <a class="nav-link" href="{{ route('login') }}" style="color:#fefefe; display:inline;">{{ __('ログイン') }}</a>
-
-            @if (Route::has('register'))
-
-                    <a class="nav-link" href="{{ route('register') }}" style="color:#fefefe; display:inline;">{{ __('会員登録') }}</a>
-                </p>
-            @endif
-        @endguest
-        <br>
         <div style="margin-top:24px;">
-        なんでも売ります<br>
-        <p style="font-size:2.4em">Larashop</p><br>
+        <p style="font-size:2.4em" class="footbar">ECWeb</p>
         </div>
-
         <p style="font-size:0.7em;">@copyright @h_k1992</p>
         </footer>
     </div>

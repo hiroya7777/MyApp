@@ -186,3 +186,35 @@ margin-right: 4px;
   background-color: #e1e7f0;
   border-radius: 40px;
 }
+
+.footer_design {
+  background-color: #07728a;
+  text-align: center;
+  color: #fefefe;
+  padding: 30px;
+}
+
+.pt-4,
+.py-4 {
+  padding-top: 3.5rem !important;
+}
+
+.pb-4,
+.py-4 {
+  padding-bottom: 3.5rem !important;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.32rem;
+  padding-bottom: 0.32rem;
+  margin-right: 1rem;
+  font-size: 1.125rem;
+  line-height: inherit;
+  white-space: nowrap;
+  font-family: 'Corben', cursive;
+}
+
+.footbar {
+  font-family: 'Corben', cursive;
+}
