@@ -82,10 +82,10 @@
         </main>
 
         <footer class="footer_design">
-        <div style="margin-top:24px;">
-        <p style="font-size:2.4em" class="footbar">ECWeb</p>
-        </div>
-        <p style="font-size:0.7em;">@copyright @h_k1992</p>
+            <div style="margin-top:24px;">
+                <a class="navbar-brand" style="color:#fefefe; font-size:3.0em" href="{{ url('/') }}" >ECWeb</a>
+            </div>
+                <p style="font-size:0.7em;">@copyright @h_k1992</p>
         </footer>
     </div>
 </body>
