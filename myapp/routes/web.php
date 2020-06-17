@@ -20,6 +20,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/checkout', 'ShopController@checkout');
     Route::get('/detail/{id}', 'ShopController@show');
     Route::post('/detail/{id}', 'ShopController@addMycart');
+    Route::get('profile', 'ShopController@getProfile');
 });
 
 Route::get('/', 'ShopController@index');
