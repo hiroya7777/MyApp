@@ -32,4 +32,19 @@ class UserRequest extends FormRequest
             'email' => ['required', Rule::unique('users')->ignore($user->id)],
         ];
     }
+
+    /**
+    * 定義済みバリデーションルールのエラーメッセージ取得
+    *
+    * @return array
+    */
+    public function messages()
+    {
+        return [
+            'name.required' => '名前は入力必須です',
+            'name.max' => '名前は255文字以内です',
+            'email.required'  => 'メールアドレスは入力必須です',
+            'email.unique'  => '既に存在するメールアドレスです',
+        ];
+    }
 }
