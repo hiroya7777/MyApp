@@ -15,7 +15,7 @@ class AddUsersPaymentTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->integer('status', false)->nullable()->comment('ステータス');
-            $table->string('stripe_id', 255)->unique()->comment('決済ID');
+            $table->string('stripe_id', 255)->unique()->nullable()->comment('決済ID');
         });
     }
 
