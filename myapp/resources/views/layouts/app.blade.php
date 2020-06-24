@@ -92,5 +92,8 @@
                 <p style="font-size:0.7em;">@copyright @h_k1992</p>
         </footer>
     </div>
+    @if(request()->path()==='user/payment/form')
+        @include('parts.payment');
+    @endif
 </body>
 </html>
