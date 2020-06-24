@@ -7,16 +7,23 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Stock;
 use App\Models\Cart;
 use App\Mail\Thanks;
+use App\User;
 use Illuminate\Support\Facades\Mail;
+use Validator;
+use DB;
+use Illuminate\Validation\Rule;
+use App\Http\Requests\UserRequest;
 
 class ShopController extends Controller
 {
     protected $stock;
+    protected $user;
 
-    public function __construct(Stock $stock)
+    public function __construct(Stock $stock, User $user)
     {
         $this->middleware('auth');
         $this->stock = $stock;
+        $this->user = $user;
     }
 
     public function index()
@@ -63,5 +70,20 @@ class ShopController extends Controller
         $stockId = $request->stock_id;
         $stock = $this->stock->find($stockId);
         return view('detail', compact('stock'));
+    }
+
+    public function getProfile()
+    {
+        $user = Auth::user();
+        return view('profile', compact('user'));
+    }
+
+    public function postProfile(UserRequest $request, User $user)
+    {
+        $user = Auth::user();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
+        return view('profile', compact('user'));
     }
 }
