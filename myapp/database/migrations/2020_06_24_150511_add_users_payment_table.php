@@ -14,7 +14,7 @@ class AddUsersPaymentTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('status', false)->comment('ステータス');
+            $table->integer('status', false)->nullable()->comment('ステータス');
             $table->string('stripe_id', 255)->unique()->comment('決済ID');
         });
     }
@@ -27,8 +27,8 @@ class AddUsersPaymentTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('status', 10)->comment('ステータス');
-            $table->dropColumn('stripe_id', 255)->unique()->comment('決済ID');
+            $table->dropColumn('status');
+            $table->dropColumn('stripe_id');
         });
     }
 }
